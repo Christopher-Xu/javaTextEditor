@@ -52,17 +52,29 @@ public class textEditor extends JFrame{
         
         //editing menuBar
         JMenu file = new JMenu("File");
-        JMenuItem exit = new JMenuItem("Exit");
-        exit.setToolTipText("closes the program");
+        JMenuItem quit = new JMenuItem("Quit");
+            KeyStroke ctrlQ = KeyStroke.getKeyStroke(KeyEvent.VK_Q, ActionEvent.CTRL_MASK);
+            quit.setAccelerator(ctrlQ);
+            quit.setToolTipText("closes the program (ctrl+q)");
+        
         JMenuItem open = new JMenuItem("Open");
         open.setToolTipText("opens a text document from hard drive");
+            KeyStroke ctrlO = KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK);
+            open.setAccelerator(ctrlO);
+            open.setToolTipText("opens a file from file system (ctrl+o)");
+        
         JMenuItem save = new JMenuItem("Save");
-        save.setToolTipText("saves file to hard drive");
+            KeyStroke ctrlS = KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK);
+            save.setAccelerator(ctrlS);
+            save.setToolTipText("saves current file (ctrl+s)");
+        
         JMenuItem saveAs = new JMenuItem("Save As");
-        saveAs.setToolTipText("saves file to specific part of hard drive");
+            KeyStroke ctrlShiftS = KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK|ActionEvent.SHIFT_MASK);
+            saveAs.setAccelerator(ctrlShiftS);
+            saveAs.setToolTipText("saves file to specific part of hard drive (ctrl+shift+s");
         
         
-            file.add(exit);
+            file.add(quit);
             file.add(open);
             file.add(save);
             file.add(saveAs);
@@ -102,7 +114,7 @@ public class textEditor extends JFrame{
             area.setBackground(Color.darkGray);
         });
         
-        exit.addActionListener((ActionEvent event) -> {
+        quit.addActionListener((ActionEvent event) -> {
                 System.exit(0);
             
         });
@@ -200,6 +212,7 @@ public class textEditor extends JFrame{
         GridLayout gl = new GridLayout(1,1);//the layout of this pane is a GridLayout with 1 row, 1 columns
         pane.setLayout(gl);
         pane.add(scrollPane);
+
         //pane.add(fonts);
         setJMenuBar(menuBar);
     }
