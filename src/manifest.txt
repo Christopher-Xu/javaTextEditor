@@ -1,5 +1,2 @@
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
+Main-Class: textEditor
 
-
-testing 123
