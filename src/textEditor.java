@@ -113,6 +113,7 @@ public class textEditor extends JFrame{
         light.addActionListener((ActionEvent event) -> {
             area.setForeground(Color.black);
             area.setBackground(Color.white);
+            area.setCaretColor(Color.black);
            
             menuBar.setBackground(Color.white);
             ital.setBackground(Color.white);
@@ -123,6 +124,7 @@ public class textEditor extends JFrame{
         dark.addActionListener((ActionEvent event) -> {
             area.setForeground(Color.white);
             area.setBackground(Color.darkGray);
+            area.setCaretColor(Color.white);
             
             menuBar.setBackground(darkOrange);
             ital.setBackground(darkOrange);
