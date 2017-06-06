@@ -25,6 +25,9 @@ public class textEditor extends JFrame{
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
+        //Color for future reference
+        
+        Color darkOrange = new Color (214,170,84);
         
         //Creates Components
         
@@ -43,6 +46,7 @@ public class textEditor extends JFrame{
         
         JScrollPane scrollPane = new JScrollPane(area);
         JMenuBar menuBar = new JMenuBar();
+       
         JFileChooser chooser = new JFileChooser();
         
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT file", "txt");
@@ -108,10 +112,22 @@ public class textEditor extends JFrame{
         light.addActionListener((ActionEvent event) -> {
             area.setForeground(Color.black);
             area.setBackground(Color.white);
+           
+            menuBar.setBackground(Color.white);
+            ital.setBackground(Color.white);
+            bold.setBackground(Color.white);
+            fontSize.setBackground(Color.white);
+            fontComboBox.setBackground(Color.white);
         });
         dark.addActionListener((ActionEvent event) -> {
             area.setForeground(Color.white);
             area.setBackground(Color.darkGray);
+            
+            menuBar.setBackground(darkOrange);
+            ital.setBackground(darkOrange);
+            bold.setBackground(darkOrange);
+            fontSize.setBackground(darkOrange);
+            fontComboBox.setBackground(darkOrange);
         });
         
         quit.addActionListener((ActionEvent event) -> {
