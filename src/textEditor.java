@@ -14,12 +14,13 @@ public class textEditor extends JFrame{
     private UndoManager undoManager = new UndoManager();
     
     public textEditor(){
+        /*
         try{
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }catch (Exception e){
             e.printStackTrace();
         }    
-
+        */
         setTitle(currentFile);
         setSize(500,500);
         setLocationRelativeTo(null);
